@@ -8,7 +8,7 @@ def main():
 
 	if osType == "windows":
 		system('cls')
-		runMainMenu() 
+		runMainMenu()
 	else:
 		print("Windows Toolkit") # TODO change to nice header and move it to mainMenu.py
 		print("You are not running Windows! This program is made for Windows explicitly.")

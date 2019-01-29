@@ -1,6 +1,6 @@
 import sys
 from os import system
-from app.menus.installMenu import runInstallMenu
+from app.menus.installMenu import runInstallMenu #fix import
 
 # Main Menu options are organised as dictionary for the simplicyty of managing entries
 # key(number), display name, function name
@@ -37,18 +37,14 @@ def displayCustomScriptsMenu():
 
 # This function should be called from external function
 def runMainMenu():
-#Test run
-	#while True:
+	system('cls')
+	displayMainMenu()
 
-		system('cls')
-
-		displayMainMenu()
-
-		userChoice = input("What do you want to do? x for exit: ")
-		if userChoice.isdigit():
-			userChoice = int(userChoice)
-			goToSubmenu(userChoice)
-		elif userChoice == 'x':
-			sys.exit()
-		else:
-			print("Invalid input!")
+	userChoice = input("What do you want to do? x for exit: ")
+	if userChoice.isdigit():
+		userChoice = int(userChoice)
+		goToSubmenu(userChoice)
+	elif userChoice == 'x':
+		sys.exit()
+	else:
+		print("Invalid input!")

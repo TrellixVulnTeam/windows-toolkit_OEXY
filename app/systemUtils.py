@@ -8,18 +8,3 @@ def platformName():
 		return "windows"
 	else:
 		return "other-platform"
-
-#TODO make it silent
-#@staticmethod
-def checkIfChocolateyIsInstalled():
-	try:
-		subprocess.call(["choco", "--version"])
-	except OSError as e:
-		if e.errno == os.errno.ENOENT:
-			return 'false'
-	else:
-		return 'true'
-
-def installChocolatey():
-	#TODO
-	print('installing chocolatey')

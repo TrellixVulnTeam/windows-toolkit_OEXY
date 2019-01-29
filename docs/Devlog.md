@@ -1,0 +1,1 @@
+[] Problem with circular calling - mainMenu calls function from installMenu and installMenu calls function from mainMenu.
