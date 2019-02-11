@@ -1,13 +1,31 @@
 import sys
 from os import system
-from app.menus.installMenu import runInstallMenu #fix import
+from app.chocolateyUtils import *
+from app.menus.menuUtils import *
+from app.cliUtils import *
+from app.scriptsUtils import *
+from pathlib import Path
+#from app.menus.installMenu import runInstallMenu #fix import
+
+#================ GLOBAL VARIABLES =================
+
+menusFolderPath = Path("./app/menus/")
+
+#================ GLOBAL FUNCTIONS =================
+
+def backToMainMenu():
+	runMainMenu()
 
 # Main Menu options are organised as dictionary for the simplicyty of managing entries
 # key(number), display name, function name
 
+#============================================
+#================ MAIN MENU =================
+#============================================
+
 mainMenuOptionsDict = {
-	1 : ["Install Programs", "displayInstallMenu"],
-	2 : ["System Maintenance", "displayMaintenanceMenu"],
+	1 : ["Install Programs", "runInstallMenu"],
+	2 : ["System Maintenance", "runMaintenanceMenu"],
 	3 : ["Custom Scripts", "displayCustomScriptsMenu"]
 } 
 
@@ -15,7 +33,6 @@ def displayMainMenu():
 	for i in mainMenuOptionsDict:
 		extractedValues = mainMenuOptionsDict.get(i, "none")
 		displayName = extractedValues[0]
-
 		print("{}{} {}".format(i, ".", displayName))
 
 def goToSubmenu(number):
@@ -23,17 +40,6 @@ def goToSubmenu(number):
 		extractedValues = mainMenuOptionsDict.get(number, "none")
 		functionName = extractedValues[1]
 		exec(functionName+"()")
-
-# TODO: change to submenu function
-def displayInstallMenu():
-	runInstallMenu()
-
-# TODO: change to submenu function
-def displayMaintenanceMenu():
-	print("System Maintenance")
-
-def displayCustomScriptsMenu():
-	print("System Maintenance")
 
 # This function should be called from external function
 def runMainMenu():
@@ -48,3 +54,80 @@ def runMainMenu():
 		sys.exit()
 	else:
 		print("Invalid input!")
+
+#============================================
+#================ INSTALL MENU ==============
+#============================================
+
+def displayInstallMenu():
+	#test v
+	print("install menu")
+
+def runInstallMenu():
+	isChocolateyInstalled = checkIfChocolateyIsInstalled()
+
+	if isChocolateyInstalled != 'true':
+		system('cls')
+		displayInstallMenu()
+	else:
+		print("Installation processes are performed by Chocolatey package manager. It seams that you don't have Chocolatey installed on this computer.")
+		print("If you are not familliar with Chocolatey package manager, I recommend to view their website: https://chocolatey.org/about")
+		print()
+		userChoice = input("Would you like to install Chocolatey? [y / n] : ")
+		if (userChoice == 'y') or (userChoice == 'Y'):
+			installChocolatey()
+		elif (userChoice == 'n') or (userChoice == 'N'):
+			backToMainMenu()
+		else:
+			print("Invalid input!")
+
+#==================================================
+#================ SYSTEM MAINTENANCE ==============
+#==================================================
+
+# def performMaintenenceOperation(number):
+
+# 	loadedJSON =  
+# 	scriptLocation, 
+# 	mainKey, 
+# 	index = number
+# 	scriptKey
+
+
+# 	if number <= len(mainMenuOptionsDict):
+# 		extractedValues = mainMenuOptionsDict.get(number, "none")
+# 		functionName = extractedValues[1]
+# 		exec(functionName+"()")
+
+
+def runMaintenanceMenu():
+
+	# Variables related to System Maintenance 
+	systemMentainenceJSONpath = menusFolderPath / "systemMentainence.json"
+	systemMentainenceJSONkey = 'system mentainence operation'
+	mentainenceScripsPath = Path("./app/mentainenceScrips/")
+	scriptKeyName = "script"
+
+	# load JSON file to get script name to run from it
+	with open(systemMentainenceJSONpath) as f:
+		loadedJSON = json.load(f)
+
+	system('cls')
+	displayMaintenanceMenu(systemMentainenceJSONpath, systemMentainenceJSONkey)
+
+	while True:
+		userChoice = submenuFooter()
+		if userChoice == 'x':
+			backToMainMenu()
+			break
+		elif userChoice.isdigit():
+			userChoiceAsInt = int(userChoice)
+			scriptIndex = userChoiceAsInt - 1
+			runScriptFromJSON(loadedJSON, mentainenceScripsPath, systemMentainenceJSONkey, scriptIndex, scriptKeyName)
+
+def displayMaintenanceMenu(JSONpath, JSONkey):
+
+	systemMentainenceJSONpath = JSONpath
+	systemMentainenceJSONkey = JSONkey
+	submenuHeader("System Mentainence Menu")
+	displayMenuFromJSON(systemMentainenceJSONpath, systemMentainenceJSONkey)

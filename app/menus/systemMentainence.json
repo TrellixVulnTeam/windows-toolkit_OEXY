@@ -1,0 +1,12 @@
+{
+	"system mentainence operation": [
+		{
+			"display" : "defragmentation of drive",
+			"script" : "defragmentationScript"
+		},
+		{
+			"display" : "create new user",
+			"script" : "createUserScript"
+		}
+	]
+}

@@ -1,5 +1,4 @@
 from sys import platform
-#import os.path #TODO: check if this is redundand
 import subprocess
 import os
 
