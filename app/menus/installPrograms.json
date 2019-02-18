@@ -1,0 +1,16 @@
+{
+	"install programs":[
+		{
+			"display" : "7-Zip",
+			"description" : "zip archive manager",
+			"command" : "choco install 7zip -y",
+			"install flag" : 1
+		},
+		{
+			"display" : "Brackets",
+			"description" : "IDE focused on frontend",
+			"command" : "choco install brackets -y",
+			"install flag" : 0
+		}
+	]
+}

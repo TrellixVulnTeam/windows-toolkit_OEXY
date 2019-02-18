@@ -59,16 +59,15 @@ def runMainMenu():
 #================ INSTALL MENU ==============
 #============================================
 
-def displayInstallMenu():
-	#test v
-	print("install menu")
-
 def runInstallMenu():
+
+	installJSONpath = menusFolderPath / "installPrograms.json"
+	installJSONkey = 'install programs'
 	isChocolateyInstalled = checkIfChocolateyIsInstalled()
 
-	if isChocolateyInstalled != 'true':
+	if isChocolateyInstalled == 'true':
 		system('cls')
-		displayInstallMenu()
+		displayInstallMenu(installJSONpath, installJSONkey)
 	else:
 		print("Installation processes are performed by Chocolatey package manager. It seams that you don't have Chocolatey installed on this computer.")
 		print("If you are not familliar with Chocolatey package manager, I recommend to view their website: https://chocolatey.org/about")
@@ -81,31 +80,24 @@ def runInstallMenu():
 		else:
 			print("Invalid input!")
 
-#==================================================
-#================ SYSTEM MAINTENANCE ==============
-#==================================================
+def displayInstallMenu(JSONpath, JSONkey):
 
-# def performMaintenenceOperation(number):
-
-# 	loadedJSON =  
-# 	scriptLocation, 
-# 	mainKey, 
-# 	index = number
-# 	scriptKey
+	_JSONpath = JSONpath
+	_JSONkey = JSONkey
+	submenuHeader("Install Menu")
+	displayMenuFromJSONwithCheckBox(_JSONpath, _JSONkey)
 
 
-# 	if number <= len(mainMenuOptionsDict):
-# 		extractedValues = mainMenuOptionsDict.get(number, "none")
-# 		functionName = extractedValues[1]
-# 		exec(functionName+"()")
-
+#====================================================
+#================ SYSTEM MAINTENANCE ================
+#====================================================
 
 def runMaintenanceMenu():
 
 	# Variables related to System Maintenance 
 	systemMentainenceJSONpath = menusFolderPath / "systemMentainence.json"
 	systemMentainenceJSONkey = 'system mentainence operation'
-	mentainenceScripsPath = Path("./app/mentainenceScrips/")
+	mentainenceScripsPath = Path("./app/resources/mentainenceScripts/")
 	scriptKeyName = "script"
 
 	# load JSON file to get script name to run from it

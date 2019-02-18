@@ -2,11 +2,11 @@
 	"system mentainence operation": [
 		{
 			"display" : "defragmentation of drive",
-			"script" : "defragmentationScript"
+			"script" : "defragmentationScript.py"
 		},
 		{
 			"display" : "create new user",
-			"script" : "createUserScript"
+			"script" : "createUserScript.py"
 		}
 	]
 }
