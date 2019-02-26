@@ -67,23 +67,8 @@ def runInstallMenu():
 
 	if isChocolateyInstalled == 'true':
 		system('cls')
-		#displayInstallMenu(installJSONpath, installJSONkey)
-		menuObject = returnDictFromJSONwithCheckBox(installJSONpath, installJSONkey)
-		while True:
-			os.system('clear')
-			displayManuWithCheckBoxFromDict(menuObject)
-			print(menuObject)
-			userChoice = input("type number to check / uncheck function, type r to run selected functions: ")
-			if userChoice.isdigit():
-				userChoice = int(userChoice)
-				menuObject = changeCheckState(userChoice, menuObject)
-			elif userChoice == 'r':
-				break
-			else:
-				print("Invalid input!")
-				print("running checked functions...")
-				runCheckedFunctions()
-
+		installMenuLogic(installJSONpath, installJSONkey)
+		backToMainMenu()
 	else:
 		print("Installation processes are performed by Chocolatey package manager. It seams that you don't have Chocolatey installed on this computer.")
 		print("If you are not familliar with Chocolatey package manager, I recommend to view their website: https://chocolatey.org/about")
@@ -91,29 +76,15 @@ def runInstallMenu():
 		userChoice = input("Would you like to install Chocolatey? [y / n] : ")
 		if (userChoice == 'y') or (userChoice == 'Y'):
 			installChocolatey()
+			isChocolateyInstalled = checkIfChocolateyIsInstalled()
+			if isChocolateyInstalled == 'true':
+				input("Chockolatey has been successfully installed! Press any key to continue...")
+			else:
+				input("Something went wrong during Chockolatey installation, press any key to get back to main menu...")
 		elif (userChoice == 'n') or (userChoice == 'N'):
 			backToMainMenu()
 		else:
 			print("Invalid input!")
-
-def displayInstallMenu(JSONpath, JSONkey):
-
-	_JSONpath = JSONpath
-	_JSONkey = JSONkey
-	submenuHeader("Install Menu")
-	displayMenuFromJSONwithCheckBox(_JSONpath, _JSONkey)
-
-def changeCheckState(number, menuObject):
-	if number <= len(menuObject):
-		extractedValues = menuObject.get(number, "none")
-		checkStatus = extractedValues[2]
-		if checkStatus == 0:
-			extractedValues[2] = 1
-		if checkStatus == 1:
-			extractedValues[2] = 0
-		menuObject.update({number: extractedValues})
-		return menuObject
-
 
 #====================================================
 #================ SYSTEM MAINTENANCE ================

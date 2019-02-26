@@ -1,4 +1,6 @@
 import json
+from os import system
+from app.chocolateyUtils import *
 
 def displayMenuFromJSON(filePath, mainKey):
 
@@ -21,7 +23,7 @@ def displayMenuFromJSON(filePath, mainKey):
 #================ INSTALL MENU RELATED ================
 #======================================================
 
-def fuction(filePath, mainKey):
+def installMenuLogic(filePath, mainKey):
 
 	_filePath = filePath
 	_mainKey = mainKey
@@ -62,20 +64,28 @@ def fuction(filePath, mainKey):
 		if switch == 'r':
 			runCheckedFunctions(menuDict)
 
-	def runCheckedFunctions():
-		for i in mainDict:
-			extractedValues = mainDict.get(i, "none")
-			functionName = extractedValues[0]
-			checkStatus = extractedValues[2]
-			if checkStatus == 1:
-				exec(functionName+"()") #run function from chocoUtils.py
+	def runCheckedFunctions(menuDict):
+		listOfCheckedPackages = []
+		for i in menuDict:
+			extractedValues = menuDict.get(i, "none")
+			command = extractedValues[2] # probably change to "package name"
+			installFlag = extractedValues[3]
+			if installFlag == 1:
+				listOfCheckedPackages.append(command)
+		stringOfPackages = str(listOfCheckedPackages)
+		stringOfPackages_strip = stringOfPackages.strip('[]').replace("'", "")
+		print(stringOfPackages_strip)
+		input("type anything")
+		installChocoPackages(stringOfPackages_strip)
 
-#========================= INNER FLOW =========================
+	#========================= INNER FLOW =========================
 
 	menuObject = returnMenuDictFromJSON(_filePath, _mainKey)
 	installOrGetBackToMainMenu = 'r'
 	while True:
+		system('cls')
 		displayManuWithCheckBoxFromDict(menuObject)
+		print()
 		userChoice = input("type number to check / uncheck function, type [r] to run selected functions, type [x] to get back to main menu: ")
 		if userChoice.isdigit():
 			userChoice = int(userChoice)

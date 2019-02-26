@@ -3,13 +3,25 @@
 		{
 			"display" : "7-Zip",
 			"description" : "zip archive manager",
-			"command" : "choco install 7zip -y",
+			"packageName" : "7zip",
 			"install flag" : 1
 		},
 		{
 			"display" : "Brackets",
 			"description" : "IDE focused on frontend",
-			"command" : "choco install brackets -y",
+			"packageName" : "brackets",
+			"install flag" : 0
+		},
+		{
+			"display" : "Sysinternals",
+			"description" : "Sysinternals Suite",
+			"packageName" : "sysinternals",
+			"install flag" : 0
+		},
+		{
+			"display" : "Ruby",
+			"description" : "Ruby is a dynamic, open source programming language with a focus on simplicity and productivity",
+			"packageName" : "ruby",
 			"install flag" : 0
 		}
 	]

@@ -2,7 +2,9 @@ import subprocess
 import os
 from pathlib import Path
 
-resources_folder = Path("resources")
+resources_folder = Path("app/resources")
+choco_install_script = resources_folder / "install-chocolatey.bat"
+choco_install_packages_script = resources_folder / "install-chocolatey-packages.bat"
 
 #TODO make it silent
 def checkIfChocolateyIsInstalled():
@@ -12,14 +14,14 @@ def checkIfChocolateyIsInstalled():
 		if e.errno == os.errno.ENOENT:
 			return 'false'
 	else:
-		return 'true'
+		return 'true' #should be true, false for test
 
 def installChocolatey():
-	choco_install_script = resources_folder / "install-chocolatey.bat"
 	print('installing chocolatey...')
+	#print(choco_install_script.resolve) # to delete, only for test
 	subprocess.call([str(choco_install_script.resolve())])
 
+def installChocoPackages(packagesList):
+	subprocess.call([str(choco_install_packages_script.resolve()), packagesList]) #commented to test newer version below
+	#subprocess.call(choco_install_packages_script_string + ' ' + packagesList)
 
-def installChocoPackage():
-	#TODO
-	pass
