@@ -1,6 +1,7 @@
 import subprocess
 import os
 from pathlib import Path
+from app import admin
 
 resources_folder = Path("app/resources")
 choco_install_script = resources_folder / "install-chocolatey.bat"
@@ -22,6 +23,11 @@ def installChocolatey():
 	subprocess.call([str(choco_install_script.resolve())])
 
 def installChocoPackages(packagesList):
-	subprocess.call([str(choco_install_packages_script.resolve()), packagesList]) #commented to test newer version below
-	#subprocess.call(choco_install_packages_script_string + ' ' + packagesList)
+	#subprocess.call([str(choco_install_packages_script.resolve()), packagesList]) #commented to test newer version below
+
+	if not admin.isUserAdmin():
+		admin.runAsAdmin()
+
+	for package in packagesList:
+		print(package)
 
