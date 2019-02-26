@@ -30,4 +30,7 @@ def installChocoPackages(packagesList):
 
 	for package in packagesList:
 		print(package)
+		subprocess.call(["choco", "install", package, "-y"])
+
+	input("type anything")
 

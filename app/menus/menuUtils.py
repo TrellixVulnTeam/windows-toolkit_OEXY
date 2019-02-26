@@ -76,7 +76,8 @@ def installMenuLogic(filePath, mainKey):
 		stringOfPackages_strip = stringOfPackages.strip('[]').replace("'", "")
 		print(stringOfPackages_strip)
 		input("type anything")
-		installChocoPackages(stringOfPackages_strip)
+		#installChocoPackages(stringOfPackages_strip)
+		installChocoPackages(listOfCheckedPackages)
 
 	#========================= INNER FLOW =========================
 
