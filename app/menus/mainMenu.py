@@ -6,6 +6,8 @@ from app.cliUtils import *
 from app.scriptsUtils import *
 from pathlib import Path
 #from app.menus.installMenu import runInstallMenu #fix import
+from pyfiglet import Figlet
+
 
 #================ GLOBAL VARIABLES =================
 
@@ -44,6 +46,8 @@ def goToSubmenu(number):
 # This function should be called from external function
 def runMainMenu():
 	system('cls')
+	f = Figlet(font='smslant')
+	print(f.renderText('Windows Toolkit'))
 	displayMainMenu()
 
 	userChoice = input("What do you want to do? x for exit: ")
