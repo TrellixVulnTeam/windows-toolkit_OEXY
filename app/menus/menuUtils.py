@@ -73,9 +73,9 @@ def installMenuLogic(filePath, mainKey):
 			if installFlag == 1:
 				listOfCheckedPackages.append(command)
 		stringOfPackages = str(listOfCheckedPackages)
-		stringOfPackages_strip = stringOfPackages.strip('[]').replace("'", "")
-		print(stringOfPackages_strip)
-		input("type anything")
+		#stringOfPackages_strip = stringOfPackages.strip('[]').replace("'", "")
+		#print(stringOfPackages_strip)
+		#input("type anything")
 		#installChocoPackages(stringOfPackages_strip)
 		installChocoPackages(listOfCheckedPackages)
 

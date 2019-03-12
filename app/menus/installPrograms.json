@@ -7,15 +7,339 @@
 			"install flag" : 1
 		},
 		{
+			"display" : "Pea Zip",
+			"description" : "zip archive manager",
+			"packageName" : "peazip",
+			"install flag" : 1
+		},
+		{
+			"display" : "Putty",
+			"description" : "Telnet and SSH client",
+			"packageName" : "putty.install",
+			"install flag" : 1
+		},
+		{
+			"display" : "Cmder",
+			"description" : "terminal emulator",
+			"packageName" : "cmder",
+			"install flag" : 0
+		},
+		{
+			"display" : "Hyper",
+			"description" : "terminal emulator",
+			"packageName" : "hyper",
+			"install flag" : 1
+		},
+		{
+			"display" : "CPU-Z",
+			"description" : "system profiler, that detects hardware on your computer",
+			"packageName" : "cpu-z",
+			"install flag" : 1
+		},
+		{
+			"display" : "ClipX",
+			"description" : "clip board manager",
+			"packageName" : "clipx",
+			"install flag" : 1
+		},
+		{
+			"display" : "Rainmeter",
+			"description" : "system monitor",
+			"packageName" : "rainmeter",
+			"install flag" : 1
+		},
+		{
+			"display" : "FileZilla",
+			"description" : "cross-platform FTP, FTPS and SFTP client",
+			"packageName" : "filezilla",
+			"install flag" : 1
+		},
+		{
+			"display" : "KeePassXC",
+			"description" : "password manager",
+			"packageName" : "keepassxc",
+			"install flag" : 1
+		},
+		{
+			"display" : "Cryptomator",
+			"description" : "folder encryption tool",
+			"packageName" : "cryptomator",
+			"install flag" : 1
+		},
+		{
+			"display" : "EseUS Partition Master free",
+			"description" : "partitioning tool",
+			"packageName" : "partitionmasterfree",
+			"install flag" : 1
+		},
+		{
+			"display" : "EseUS Partition Master free",
+			"description" : "partitioning tool",
+			"packageName" : "partitionmasterfree",
+			"install flag" : 1
+		},
+		{
+			"display" : "f.lux",
+			"description" : "monitor color temperature manager",
+			"packageName" : "f.lux",
+			"install flag" : 1
+		},
+		{
+			"display" : "VirtualBox",
+			"description" : "cross-platform virtualization application",
+			"packageName" : "virtualbox",
+			"install flag" : 1
+		},
+		{
+			"display" : "MSI Afterburner",
+			"description" : "MSI Afterburner is ultimate graphics card utility",
+			"packageName" : "msiafterburner",
+			"install flag" : 1
+		},
+		{
+			"display" : "Firefox",
+			"description" : "web browser",
+			"packageName" : "firefox",
+			"install flag" : 1
+		},
+		{
+			"display" : "uTorrent",
+			"description" : "torrent manager",
+			"packageName" : "utorrent",
+			"install flag" : 1
+		},
+		{
+			"display" : "Franz",
+			"description" : "multi protocol communicator",
+			"packageName" : "franz",
+			"install flag" : 1
+		},
+		{
+			"display" : "LibreOffice",
+			"description" : "office suite",
+			"packageName" : "libreoffice",
+			"install flag" : 1
+		},
+		{
+			"display" : "Adobe Reader",
+			"description" : "PDF reader",
+			"packageName" : "adobereader",
+			"install flag" : 1
+		},
+		{
+			"display" : "Googledrive",
+			"description" : "Google cloud drive",
+			"packageName" : "googledrive",
+			"install flag" : 1
+		},
+		{
+			"display" : "Google Drive File Stream ",
+			"description" : "Google drive service, that streams files on-demand without taking local drive space",
+			"packageName" : "google-drive-file-stream",
+			"install flag" : 0
+		},
+		{
+			"display" : "MEGAsync",
+			"description" : "50 GB of free storage with end-to-end encryption",
+			"packageName" : "megasync",
+			"install flag" : 1
+		},
+		{
+			"display" : "Dropbox",
+			"description" : "cloud storage",
+			"packageName" : "dropbox",
+			"install flag" : 1
+		},
+		{
+			"display" : "Calibre",
+			"description" : "e-book manager",
+			"packageName" : "calibre",
+			"install flag" : 1
+		},
+		{
+			"display" : "Homebank",
+			"description" : "financial manager",
+			"packageName" : "homebank",
+			"install flag" : 1
+		},
+		{
+			"display" : "Thunderbird",
+			"description" : "email",
+			"packageName" : "thunderbird",
+			"install flag" : 0
+		},
+		{
+			"display" : "ComicRack",
+			"description" : "comic reader",
+			"packageName" : "comicrack",
+			"install flag" : 1
+		},
+		{
+			"display" : "Anki",
+			"description" : "flash card tool for learning languages and another stuff",
+			"packageName" : "anki",
+			"install flag" : 1
+		},
+		{
+			"display" : "Git",
+			"description" : "command line version control",
+			"packageName" : "git",
+			"install flag" : 1
+		},
+		{
+			"display" : "GitHub Desktop",
+			"description" : "Gui tool for github repositories",
+			"packageName" : "github-desktop",
+			"install flag" : 1
+		},
+		{
+			"display" : "Sublimetext3",
+			"description" : "text editor for programmers",
+			"packageName" : "sublimetext3",
+			"install flag" : 1
+		},
+		{
+			"display" : "Xmind",
+			"description" : "mind mapping tool",
+			"packageName" : "xmind",
+			"install flag" : 1
+		},
+		{
 			"display" : "Brackets",
 			"description" : "IDE focused on frontend",
 			"packageName" : "brackets",
 			"install flag" : 0
 		},
 		{
-			"display" : "Sysinternals",
-			"description" : "Sysinternals Suite",
-			"packageName" : "sysinternals",
+			"display" : "Nodejs",
+			"description" : "Node.js is a JavaScript runtime",
+			"packageName" : "nodejs.install",
+			"install flag" : 1
+		},
+		{
+			"display" : "Python3",
+			"description" : "Python 3.x is a programming language that lets you work more quickly and integrate your systems more effectively",
+			"packageName" : "python3",
+			"install flag" : 1
+		},
+		{
+			"display" : "Jdk8",
+			"description" : "Java SE 8",
+			"packageName" : "jdk8",
+			"install flag" : 1
+		},
+		{
+			"display" : "Java SE Runtime Environment",
+			"description" : "Java runtime allows to run java programs",
+			"packageName" : "jre8",
+			"install flag" : 1
+		},
+		{
+			"display" : "JetBrains Toolbox",
+			"description" : "A control panel for your JetBrains tools and projects. It allows you to install Idea, PyCharm etc.",
+			"packageName" : "jetbrainstoolbox",
+			"install flag" : 1
+		},
+		{
+			"display" : "Android Studio",
+			"description" : "IDE for developing Android apps",
+			"packageName" : "androidstudio",
+			"install flag" : 0
+		},
+		{
+			"display" : "XAMPP",
+			"description" : "Web developement environment containing MySQL, PHP",
+			"packageName" : "bitnami-xampp",
+			"install flag" : 1
+		},
+		{
+			"display" : "MySQL Workbanch",
+			"description" : "GUI manager for MySQL",
+			"packageName" : "mysql.workbench",
+			"install flag" : 1
+		},
+		{
+			"display" : "SQLite",
+			"description" : "Embeded, one-file database",
+			"packageName" : "sqlite",
+			"install flag" : 1
+		},
+		{
+			"display" : "SQLite Browser",
+			"description" : "GUI tool for SQLite",
+			"packageName" : "sqlitebrowser",
+			"install flag" : 1
+		},
+		{
+			"display" : "Steam",
+			"description" : "Gaming platform",
+			"packageName" : "steam",
+			"install flag" : 1
+		},
+		{
+			"display" : "Origin",
+			"description" : "Gaming platform",
+			"packageName" : "origin",
+			"install flag" : 1
+		},
+		{
+			"display" : "Uplay",
+			"description" : "Gaming platform",
+			"packageName" : "uplay",
+			"install flag" : 1
+		},
+		{
+			"display" : "Gog Galaxy",
+			"description" : "Gaming platform",
+			"packageName" : "goggalaxy",
+			"install flag" : 1
+		},
+		{
+			"display" : "DosBox",
+			"description" : "Dos emulator for gaming",
+			"packageName" : "dosbox",
+			"install flag" : 0
+		},
+		{
+			"display" : "VLC",
+			"description" : "Video player",
+			"packageName" : "vlc",
+			"install flag" : 1
+		},
+		{
+			"display" : "MusicBee",
+			"description" : "Music player",
+			"packageName" : "musicbee",
+			"install flag" : 1
+		},
+		{
+			"display" : "Spotify",
+			"description" : "Music streamer",
+			"packageName" : "spotify",
+			"install flag" : 1
+		},
+		{
+			"display" : "Audioshell",
+			"description" : "metadata manager",
+			"packageName" : "audioshell",
+			"install flag" : 1
+		},
+		{
+			"display" : "MusicBee",
+			"description" : "Music player",
+			"packageName" : "musicbee",
+			"install flag" : 1
+		},
+		{
+			"display" : "Blender",
+			"description" : "3d modeling program",
+			"packageName" : "blender",
+			"install flag" : 0
+		},
+		{
+			"display" : "Unity",
+			"description" : "3d engine for game dev",
+			"packageName" : "unity",
 			"install flag" : 0
 		},
 		{
