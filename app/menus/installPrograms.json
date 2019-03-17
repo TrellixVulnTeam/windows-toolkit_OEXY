@@ -43,6 +43,18 @@
 			"install flag" : 1
 		},
 		{
+			"display" : "Everything",
+			"description" : "administrative tool that locates files and folders by filename instantly for Windows. Unlike Windows search "Everything" initially displays every file and folder on your computer (hence the name "Everything"). You type in a search filter to limit what files and folders are displayed.",
+			"packageName" : "everything",
+			"install flag" : 1
+		},
+		{
+			"display" : "Greenshot",
+			"description" : "Greenshot is a light-weight screenshot software tool for Windows with bouild-in graphical editor",
+			"packageName" : "greenshot",
+			"install flag" : 1
+		},
+		{
 			"display" : "Rainmeter",
 			"description" : "system monitor",
 			"packageName" : "rainmeter",
