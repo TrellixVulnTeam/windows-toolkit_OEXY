@@ -44,8 +44,14 @@
 		},
 		{
 			"display" : "Everything",
-			"description" : "administrative tool that locates files and folders by filename instantly for Windows. Unlike Windows search "Everything" initially displays every file and folder on your computer (hence the name "Everything"). You type in a search filter to limit what files and folders are displayed.",
+			"description" : "administrative tool that locates files and folders by filename instantly for Windows. Unlike Windows search \"Everything\" initially displays every file and folder on your computer (hence the name \"Everything\"). You type in a search filter to limit what files and folders are displayed.",
 			"packageName" : "everything",
+			"install flag" : 1
+		},
+		{
+			"display" : "Listary",
+			"description" : "Listary is a unique search utility for Windows. Not only does it make file browsing truly flexible -- thanks to its multi-file managers support -- but the ultra-compact UI also redefines minimalism.",
+			"packageName" : "listary",
 			"install flag" : 1
 		},
 		{
@@ -160,6 +166,12 @@
 			"display" : "Dropbox",
 			"description" : "cloud storage",
 			"packageName" : "dropbox",
+			"install flag" : 0
+		},
+		{
+			"display" : "Resilio",
+			"description" : "bittorrent sync",
+			"packageName" : "resilio-sync-home",
 			"install flag" : 1
 		},
 		{
