@@ -1,4 +1,4 @@
-# windows-toolkit
+# Windows Toolkit
 Bunch of handy tools written in python for Windows
 
 ## Project Overview
